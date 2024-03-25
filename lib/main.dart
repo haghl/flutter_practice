@@ -47,6 +47,7 @@ class HelloPage extends StatefulWidget {
 
 class _HelloPageState extends State<HelloPage> {
   String _message = '호달달';
+  int _counter = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -60,10 +61,11 @@ class _HelloPageState extends State<HelloPage> {
             widget.title,
           ),
         ),
-        body: Text(
+        body: Center(
+            child: Text(
           _message,
           style: TextStyle(fontSize: 40),
-        ));
+        )));
   }
 
   void _changeMessage() {
